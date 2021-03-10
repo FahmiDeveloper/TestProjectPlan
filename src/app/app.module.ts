@@ -14,17 +14,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { RouterModule, Routes } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   { path: 'auth/signup', component: SignupComponent },
-  { path: 'auth/signin', component: SigninComponent }
+  { path: 'auth/signin', component: SigninComponent },
+  { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
